@@ -11,7 +11,7 @@ module.exports = io => {
 			UsersModel.create(data, err => {
 				if(err) return console.log('UsersModel',err);
 
-				io.sockets.emit('transmit user', data);
+				socket.emit('transmit user', data);
 			});
 		});
 
